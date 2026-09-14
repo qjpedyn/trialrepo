@@ -26,3 +26,11 @@ layout = html.Div(
         )
     ]
 )
+        if pathname == '/' or pathname == '/home':
+            returnlayout = home.layout
+            
+        elif pathname == '/movies':
+            returnlayout = 'moviepage'
+            
+        else:
+            returnlayout = 'error404'

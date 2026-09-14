@@ -9,6 +9,8 @@ from apps import commonmodules as cm
 
 # Importing your app variable from app.py so we can use it
 from app import app
+from apps import home
+
 
 app.layout = html.Div(
     [
