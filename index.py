@@ -5,6 +5,7 @@ import dash_bootstrap_components as dbc
 from dash import dcc, html
 from dash.dependencies import Input, Output, State
 from dash.exceptions import PreventUpdate
+from apps import commonmodules as cm
 
 # Importing your app variable from app.py so we can use it
 from app import app
@@ -14,8 +15,11 @@ app.layout = html.Div(
         # Location Variable -- contains details about the url
         dcc.Location(id='url', refresh=True),
 
+        cm.navbar
+
         # Page Content -- Div that contains page layout
         html.Div(id='page_content', className='m-2 p-2'),
+
     ]
 )
 @app.callback(
