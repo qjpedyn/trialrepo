@@ -17,8 +17,7 @@ app.layout = html.Div(
     [
         # Location Variable -- contains details about the url
         dcc.Location(id='url', refresh=True),
-        html.Div(commonmodules.navbar, className='m-0 p-0'),
-
+        commonmodules.navbar,
 
         # Page Content -- Div that contains page layout
         html.Div(id='page_content', className='m-2 p-2'),
