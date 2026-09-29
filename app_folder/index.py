@@ -32,6 +32,7 @@ app.layout = html.Div(
         Input('url', 'pathname')
     ]
 )
+
 def displaypage (pathname):
     
     # This code block extracts the id of the triggered input
