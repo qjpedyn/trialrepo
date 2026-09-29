@@ -5,7 +5,7 @@ import dash_bootstrap_components as dbc
 from dash import dcc, html
 from dash.dependencies import Input, Output, State
 from dash.exceptions import PreventUpdate
-from apps import home
+from apps import home, commonmodules
 
 from apps.movies import movie_management_profile_cp, movie_management
 
@@ -17,6 +17,8 @@ app.layout = html.Div(
     [
         # Location Variable -- contains details about the url
         dcc.Location(id='url', refresh=True),
+        html.Div(commonmodules.navbar, className='m-0 p-0'),
+
 
         # Page Content -- Div that contains page layout
         html.Div(id='page_content', className='m-2 p-2'),
